@@ -1,0 +1,158 @@
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@    FONTS     @@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@font-face {
+  font-family: 'logo';
+  src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: '400';
+  src: url('../fonts/IRANSansWeb_Light.ttf');
+}
+
+@font-face {
+  font-family: '500';
+  src: url('../fonts/IRANSansWeb_Medium.ttf');
+}
+
+@font-face {
+  font-family: '700';
+  src: url('../fonts/IRANSansWeb_Bold.ttf');
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@        VARIABLES       @@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+:root {
+  --normal-font-size: 1rem;
+
+  --first-color: hsl(203, 70%, 60%);
+  --second-color: hsl(277, 55%, 70%);
+  --title-color: hsl(203, 8%, 100%);
+  --text-color: hsl(203, 8%, 80%);
+  --body-color: hsl(259, 20%, 20%);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --normal-font-size: 0.9rem;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --normal-font-size: 0.8rem;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@           BASE         @@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: '500';
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: '700';
+  color: var(--title-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@    REUSABLE CLASSES    @@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.container {
+  max-width: 1200px;
+  padding-inline: 1.5rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 374px) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--second-color), var(--first-color));
+  color: var(--title-color);
+  transition: box-shadow 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 40px hsla(203, 70%, 60%, 0.5);
+}
+
+.gradiant-text {
+  background: linear-gradient(var(--second-color), var(--first-color));
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@       FOOTER COPY      @@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.footer__copy {
+  font-size: 0.6rem;
+  font-family: '400';
+  color: var(--title-color);
+  text-align: center;
+  padding-bottom: 1rem;
+
+  a {
+    color: var(--second-color);
+  }
+}

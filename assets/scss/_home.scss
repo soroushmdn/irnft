@@ -5,7 +5,7 @@
 .home__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 3rem 0;
   padding: 10rem 5rem 5rem;
 
   height: 100vh;
@@ -14,6 +14,8 @@
 
 .home__left {
   display: grid;
+  grid-row: 1/3;
+  grid-column: 2/3;
 }
 
 .home__images {
@@ -24,7 +26,8 @@
 }
 
 .home__stats {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 1rem;
   width: max-content;
   margin-right: auto;
@@ -32,7 +35,7 @@
 
 .home__float-img {
   position: absolute;
-  top: -2rem;
+  top: -1rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -84,6 +87,19 @@
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
    @@@@@@       BACKGROUND       @@@@@@
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  mix-blend-mode: soft-light;
+  opacity: 0.5s;
+}
+
 .bg-circle {
   position: absolute;
   z-index: -1;
@@ -115,18 +131,6 @@
   height: 300px;
 }
 
-.main-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  mix-blend-mode: soft-light;
-  opacity: 0.5s;
-}
-
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
    @@@@@@        ANIMATION       @@@@@@
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -135,7 +139,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(3rem);
+    transform: translateY(5rem);
   }
 
   100% {
@@ -148,7 +152,6 @@
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @media (max-width: 1024px) {
   .home__container {
-    gap: 0 2rem;
     height: initial;
     align-content: initial;
   }
@@ -168,6 +171,19 @@
 
   .home__group {
     column-gap: 3rem;
+  }
+
+  @keyframes eth {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(2.5rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
   /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -191,12 +207,7 @@
 
 @media (max-width: 767px) {
   .home__container {
-    gap: 0;
     padding: 10rem 0rem 5rem;
-  }
-
-  .home__float-img {
-    width: 90px;
   }
 }
 
@@ -207,24 +218,39 @@
     padding: 8rem 0 5rem;
   }
 
+  .home__left {
+    grid-row: initial;
+    grid-column: initial;
+  }
+
   .home__images {
     width: 100%;
+  }
+
+  .home__float-img {
+    top: -1rem;
   }
 
   /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
      @@@@@@       BACKGROUND       @@@@@@
      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
   .bg-circle-1 {
+    width: 150px;
+    height: 150px;
     top: -1rem;
     right: -1rem;
   }
 
   .bg-circle-2 {
+    width: 200px;
+    height: 200px;
     bottom: -1rem;
     right: -1rem;
   }
 
   .bg-circle-3 {
+    width: 200px;
+    height: 200px;
     top: 15rem;
     left: -3rem;
   }

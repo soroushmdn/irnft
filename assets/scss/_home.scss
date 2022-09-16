@@ -58,12 +58,6 @@
   margin-bottom: 3rem;
 }
 
-.home__btn {
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.3rem;
-  color: var(--title-color);
-}
-
 .home__group {
   display: flex;
   column-gap: 5rem;
@@ -87,7 +81,6 @@
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
    @@@@@@       BACKGROUND       @@@@@@
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
 .main-bg {
   position: absolute;
   top: 0;
@@ -132,7 +125,98 @@
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   @@@@@@       MAGIC BUTTON     @@@@@@
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.magic-btn {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(45deg, var(--second-color), var(--first-color));
+  color: var(--title-color);
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+}
+
+.magic-btn::after {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    var(--second-color) 30%,
+    var(--first-color) 50%
+  );
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -5px;
+  border-radius: 0.3rem;
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.magic-btn span {
+  position: relative;
+  z-index: 10;
+}
+
+.magic-btn__img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  pointer-events: none;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.magic-btn__img-1 {
+  transform: translate(-45px, -5px);
+  width: 20px;
+  filter: blur(0.3px);
+}
+.magic-btn__img-2 {
+  transform: translate(10px, -20px);
+}
+.magic-btn__img-3 {
+  transform: translate(50px, 0);
+  filter: blur(0.5px);
+}
+.magic-btn__img-4 {
+  transform: translate(-20px, 15px);
+}
+
+//  @@@@@@@@@@  MAGIC BUTTON:HOVER  @@@@@@@@@
+.magic-btn:hover {
+  transform: scale(1.15);
+}
+
+.magic-btn:hover::after,
+.magic-btn:hover .magic-btn__img {
+  opacity: 1;
+}
+
+.magic-btn:hover .magic-btn__img-1 {
+  transform: translate(-50px, -13px) rotate(-20deg);
+}
+
+.magic-btn:hover .magic-btn__img-2 {
+  transform: translate(15px, -30px) rotate(20deg);
+}
+
+.magic-btn:hover .magic-btn__img-3 {
+  transform: translate(60px, -20px) rotate(-20deg) scale(1.2);
+}
+
+.magic-btn:hover .magic-btn__img-4 {
+  transform: translate(-25px, 35px) rotate(-20deg) scale(1.2);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
    @@@@@@        ANIMATION       @@@@@@
+   @@@@@@    .home__float-img    @@@@@@
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 @keyframes eth {
   0% {
@@ -173,6 +257,24 @@
     column-gap: 3rem;
   }
 
+  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@@@@       MAGIC BUTTON     @@@@@@
+     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+  .magic-btn:hover {
+    transform: none;
+    box-shadow: 0 0 40px hsla(203, 70%, 60%, 0.5);
+  }
+
+  .magic-btn::after,
+  .magic-btn__img {
+    display: none;
+  }
+
+  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+     @@@@@@        ANIMATION       @@@@@@
+     @@@@@@    .home__float-img    @@@@@@
+     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
   @keyframes eth {
     0% {
       transform: translateY(0);

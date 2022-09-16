@@ -129,7 +129,7 @@ button {
   display: inline-block;
   background: linear-gradient(45deg, var(--second-color), var(--first-color));
   color: var(--title-color);
-  transition: box-shadow 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {

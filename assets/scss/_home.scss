@@ -134,7 +134,7 @@
   color: var(--title-color);
   padding: 0.8rem 1.6rem;
   border-radius: 0.3rem;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .magic-btn::after {
@@ -155,7 +155,7 @@
   z-index: -1;
   filter: blur(15px);
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .magic-btn span {
@@ -168,7 +168,7 @@
   inset: 0;
   margin: auto;
   pointer-events: none;
-  transition: 0.3s;
+  transition: 0.6s;
   opacity: 0;
 }
 

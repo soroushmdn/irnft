@@ -31,77 +31,113 @@
     <!-- @@@@@@@@@@@@@@  HEADER  @@@@@@@@@@@@@ -->
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
     <header class="header">
+      <div class="overlay"></div>
+
       <div class="container">
         <nav class="nav">
-          <a href="#" class="nav__logo"
-            ><img src="./assets/img/favicon.png" alt="logo" /><span
-              class="gradiant-text"
-              >irnft</span
-            ></a
-          >
+          <a href="#" class="nav__logo">
+            <img src="./assets/img/favicon.png" alt="logo" />
+            <span class="gradiant-text">irnft</span>
+          </a>
 
-          <div class="nav__menu" id="nav-menu">
-            <button class="nav__close" id="nav-close">
-              <i class="ri-close-line"></i>
-            </button>
+          <div class="nav__menu">
+            <div class="nav__menu-header">
+              <a href="#" class="nav__logo">
+                <img src="./assets/img/favicon.png" alt="logo" />
+                <span class="gradiant-text">irnft</span>
+              </a>
 
-            <a href="#" class="nav__menu-logo"
-              ><img src="./assets/img/favicon.png" alt="logo" /><span
-                class="gradiant-text"
-                >irnft</span
-              ></a
-            >
+              <i class="ri-close-line nav__close"></i>
+            </div>
 
             <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#" class="nav__link">خانه</a>
-              </li>
-
-              <li class="nav__item">
-                <a href="#" class="nav__link">
-                  بازار معاملات
-                  <i class="ri-arrow-down-s-line"></i>
-                </a>
-
-                <div class="nav__item-menu">
-                  <a href="#" class="nav__item-link">
-                    <i class="ri-funds-fill gradiant-text"></i>
-                    <div>
-                      <h5>خرید و فروش آنی</h5>
-                      <small>خرید و فروش آسان بیش از 1000 مدل nft</small>
-                    </div></a
-                  >
-                  <a href="#" class="nav__item-link">
-                    <i class="ri-copper-diamond-fill gradiant-text"></i>
-
-                    <div>
-                      <h5>بازار پیشرفته</h5>
-                      <small>سفارش گذاری با قیمت ثابت و حد ضرر</small>
-                    </div></a
-                  >
+              <li class="nav__item dropdown">
+                <div class="dropdown-box">
+                  <a href="#" class="nav__link"> بازار ها </a>
+                  <i class="ri-arrow-down-s-fill dropdown-button"></i>
                 </div>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" class="nav__link"> بیت کوین </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> اتریوم </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> تتر </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> شیبا </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item dropdown">
+                <div class="dropdown-box">
+                  <a href="#" class="nav__link"> خدمات ما </a>
+                  <i class="ri-arrow-down-s-fill dropdown-button"></i>
+                </div>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" class="nav__link"> استیبل کوین ها </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> کیف پول های سخت افزاری </a>
+                  </li>
+
+                  <li class="dropdown-inner">
+                    <div class="dropdown-inner-box">
+                      <a href="#" class="nav__link"> گیفت کارت </a>
+                      <i class="ri-arrow-left-s-fill dropdown-button"></i>
+                    </div>
+
+                    <ul class="dropdown-inner-menu">
+                      <li>
+                        <a href="#" class="nav__link">
+                          گیفت کارت پرداخت آنلاین</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="nav__link"> گیفت کارت اپلیکیشن </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav__link"> گیفت کارت بازی </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="nav__link"> متاورس </a>
+                  </li>
+                </ul>
               </li>
 
               <li class="nav__item">
-                <a href="#" class="nav__link">فروشگاه</a>
+                <a href="#" class="nav__link"> کارمزد </a>
               </li>
+
               <li class="nav__item">
-                <a href="#" class="nav__link">کارمزد</a>
+                <a href="#" class="nav__link"> بلاگ </a>
               </li>
+
               <li class="nav__item">
-                <a href="#" class="nav__link">بلاگ</a>
+                <a href="#" class="nav__link"> تماس با ما </a>
               </li>
             </ul>
 
-            <div class="nav__buttons">
-              <button class="nav__button nav__signup btn">ثبت نام</button>
-              <button class="nav__button nav__signin">ورود</button>
+            <div class="nav__menu-buttons">
+              <a href="#">ورود</a>
+              <a href="#" class="btn">ثبت نام</a>
             </div>
           </div>
 
-          <button class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-4-line"></i>
-          </button>
+          <div class="nav__buttons">
+            <a href="#">ورود</a>
+            <a href="#" class="btn">ثبت نام</a>
+          </div>
+
+          <i class="ri-menu-4-line nav__toggle"></i>
         </nav>
       </div>
     </header>

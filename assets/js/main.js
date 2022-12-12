@@ -1,16 +1,42 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@      SHOW & REMOVE MENU      @@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-const navToggle = document.getElementById('nav-toggle'),
-  navClose = document.getElementById('nav-close'),
-  navMenu = document.getElementById('nav-menu');
+const navToggle = document.querySelector('.nav__toggle'),
+  navClose = document.querySelector('.nav__close'),
+  navMenu = document.querySelector('.nav__menu'),
+  overlay = document.querySelector('.overlay');
 
 navToggle.addEventListener('click', () => {
   navMenu.classList.add('show-menu');
+  overlay.classList.add('show-overlay');
 });
 
 navClose.addEventListener('click', () => {
   navMenu.classList.remove('show-menu');
+  overlay.classList.remove('show-overlay');
+});
+
+overlay.addEventListener('click', () => {
+  navMenu.classList.remove('show-menu');
+  overlay.classList.remove('show-overlay');
+});
+
+const navLinks = document.querySelectorAll('.nav__link');
+navLinks.forEach((e) => {
+  e.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu');
+    overlay.classList.remove('show-overlay');
+  });
+});
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@    SHOW & REMOVE DROPDOWN    @@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+const dropdownButtons = document.querySelectorAll('.dropdown-button');
+dropdownButtons.forEach((e) => {
+  e.addEventListener('click', function () {
+    this.parentElement.parentElement.classList.toggle('active');
+  });
 });
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -30,7 +56,7 @@ window.addEventListener('scroll', function () {
 // @@@@@@@@        COUNTDOWN TIMER       @@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // Set the date we're counting down to
-let countDownDate = new Date('Jan 1, 2023 00:00:00').getTime();
+let countDownDate = new Date('Mar 1, 2023 00:00:00').getTime();
 
 // Update the count down every 1 second
 let x = setInterval(function () {

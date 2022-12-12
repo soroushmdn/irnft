@@ -39,11 +39,6 @@
     --normal-font-size: 0.9rem;
   }
 }
-@media (max-width: 767px) {
-  :root {
-    --normal-font-size: 0.8rem;
-  }
-}
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
    @@@@@@           BASE         @@@@@@
@@ -120,25 +115,19 @@ button {
   margin: 0 auto;
 }
 
-@media (max-width: 374px) {
-  .container {
-    padding-inline: 1rem;
-  }
-}
-
 .btn {
   display: inline-block;
   background: linear-gradient(45deg, var(--second-color), var(--first-color));
   color: var(--title-color);
-  transition: 0.3s;
+  transition: 0.3s box-shadow;
 }
 
 .btn:hover {
-  box-shadow: 0 0 40px hsla(203, 70%, 60%, 0.5);
+  box-shadow: 0 0 30px hsla(203, 70%, 60%, 0.5);
 }
 
 .gradiant-text {
-  background: linear-gradient(var(--second-color), var(--first-color));
+  background: linear-gradient(45deg, var(--second-color), var(--first-color));
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -151,10 +140,9 @@ button {
   font-family: '400';
   color: var(--title-color);
   text-align: center;
-  padding-bottom: 1rem;
 
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
   right: 0;
   width: max-content;

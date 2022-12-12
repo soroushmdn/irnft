@@ -42,7 +42,7 @@
   width: 150px;
   filter: drop-shadow(0 5px 30px hsla(203, 70%, 60%, 0.5));
 
-  animation: eth 4s infinite ease-in-out;
+  animation: floatImg 4s infinite ease-in-out;
 }
 
 .home__static-img {
@@ -96,7 +96,7 @@
   z-index: -1;
   object-fit: cover;
   mix-blend-mode: soft-light;
-  opacity: 0.5s;
+  opacity: 0.7;
 }
 
 .bg-circle {
@@ -224,7 +224,7 @@
    @@@@@@        ANIMATION       @@@@@@
    @@@@@@    .home__float-img    @@@@@@
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-@keyframes eth {
+@keyframes floatImg {
   0% {
     transform: translateY(0);
   }
@@ -266,6 +266,7 @@
   /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
      @@@@@@       MAGIC BUTTON     @@@@@@
      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
   .magic-btn:hover {
     transform: none;
     box-shadow: 0 0 40px hsla(203, 70%, 60%, 0.5);
@@ -280,7 +281,7 @@
      @@@@@@        ANIMATION       @@@@@@
      @@@@@@    .home__float-img    @@@@@@
      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-  @keyframes eth {
+  @keyframes floatImg {
     0% {
       transform: translateY(0);
     }
